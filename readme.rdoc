@@ -1,3 +1,3 @@
 = Henrietta Pussycat
 
-Gem for replacing words in a string with 'meow'.  Not at all useful, but expresses my love for Mr. Roger's Neighborhood.
+Gem for replacing words in a string with 'meow'.  Not at all useful, but expresses my love for Mr. Rogers' Neighborhood.
