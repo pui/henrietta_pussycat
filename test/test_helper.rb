@@ -1,7 +1,8 @@
 require 'rubygems'
-require 'spec'
+require 'test/unit'
+require 'shoulda'
 
 require File.dirname(__FILE__) + '/../lib/henrietta_pussycat'
  
-Spec::Runner.configure do |config|
+class Test::Unit::TestCase 
 end
