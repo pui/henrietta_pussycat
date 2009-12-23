@@ -10,7 +10,7 @@ begin
     s.email = "erica.kwan@gmail.com"
     s.homepage = "http://github.com/pui/henrietta_pussycat"
     s.description = "Replaces words with 'meow' in strings in different ways"
-    s.authors = ["Erica Kwan"]
+    s.authors = ["Erica Kwan", "Jacob Vorreuter"]
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
