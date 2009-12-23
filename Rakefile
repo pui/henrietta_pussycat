@@ -11,6 +11,7 @@ begin
     s.homepage = "http://github.com/pui/henrietta_pussycat"
     s.description = "Replaces words with 'meow' in strings in different ways"
     s.authors = ["Erica Kwan", "Jacob Vorreuter"]
+    s.add_development_dependency "shoulda", ">= 2.10"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
@@ -22,6 +23,7 @@ Rake::TestTask.new do |t|
   t.pattern = 'test/**/*_test.rb'
   t.verbose = false
 end
+task :test => :check_dependencies
 
 Rcov::RcovTask.new do |t|
   t.libs << "test"
