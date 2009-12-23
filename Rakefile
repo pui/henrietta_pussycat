@@ -1,6 +1,5 @@
 require 'rake'
 require 'rake/testtask'
-require 'rcov/rcovtask'
 
 begin
   require 'jeweler'
@@ -25,10 +24,15 @@ Rake::TestTask.new do |t|
 end
 task :test => :check_dependencies
 
-Rcov::RcovTask.new do |t|
-  t.libs << "test"
-  t.test_files = FileList['test/*_test.rb']
-  t.verbose = true
+begin
+  require 'rcov/rcovtask'
+  Rcov::RcovTask.new do |t|
+    t.libs << "test"
+    t.test_files = FileList['test/*_test.rb']
+    t.verbose = true
+  end
+rescue LoadError
+  puts "RCov is not installed. Install it with: gem install rcov"
 end
 
 task :default => :test
