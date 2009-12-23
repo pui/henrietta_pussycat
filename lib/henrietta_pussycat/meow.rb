@@ -15,7 +15,7 @@ module HenriettaPussycat
           if chunk.match(/\b(#{match_word})\b/i)
             chunk
           else
-            classic_meow_insert(chunk, Array.new(word_array))
+            classic_meow_insert(chunk, word_array.dup)
           end
         end
         chunks.join("")
