@@ -26,13 +26,15 @@ class MeowTest < Test::Unit::TestCase
 
       should "return a sentence full of meows when 'beautiful', 'telephone' and 'Mr. Rogers' are not present" do
         sentence = Meow.classic_meow_insert("Beautifully designed spoons, cups and forks.")
-        assert sentence == "meow meow meow, meow meow meow."
+        assert_equal "meow meow meow, meow meow meow.", sentence
       end
 
       should "replace all words in a string with meows when the word is not 'beautiful', 'telephone' or 'Mr. Rogers'" do
         sentence = Meow.classic_meow_insert("It's a beautiful day Mr. Rogers, in the neighborhood, a beautiful day in the neighborhood.  Telephone!")
-        assert sentence == "meow meow beautiful meow Mr. Rogers, meow meow meow, meow beautiful meow meow meow meow.  Telephone!"
+        assert_equal "meow meow beautiful meow Mr. Rogers, meow meow meow, meow beautiful meow meow meow meow.  Telephone!", sentence
       end
     end
+
   end
-end      
+
+end
